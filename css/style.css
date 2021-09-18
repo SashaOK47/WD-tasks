@@ -1,1 +1,290 @@
-@import url('fonts.css');
+:root {
+  --color-black: #333333;
+  --color-accent: #fed100;
+  --font-color: #333333;
+  --font-family: 'Montserrat', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: var(--font-family);
+}
+
+.wrapper {
+  min-width: 20rem;
+  max-width: 83.125rem;
+  padding: 0 0.9375rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  margin-top: 2.5rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header__logo {
+  margin-right: 1rem;
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 2.3125rem;
+  color: var(--color-black);
+}
+
+.menu {
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 3.125rem;
+}
+
+.menu__link {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.burger {
+  display: none;
+  width: 2.75rem;
+  background-color: red;
+
+  background-color: transparent;
+  border: none;
+
+  line-height: 0.625rem;
+  position: absolute;
+  right: 1rem;
+  top: -0.75rem;
+}
+
+.burger__line {
+  display: inline-block;
+  width: 100%;
+  height: 0.125rem;
+  background-color: #000;
+}
+
+.header__phone {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  text-decoration: none;
+  color: var(--color-black);
+
+  border-bottom: 1px solid var(--color-black);
+}
+
+/* HERO */
+
+.hero {
+  padding-top: 140px;
+  padding-bottom: 83px;
+  min-height: 650px;
+  background: url('../img/man.png') 72% 40px no-repeat;
+  background-color: var(--color-accent);
+  position: relative;
+  z-index: 1;
+}
+
+.hero__title {
+  max-width: 550px;
+  font-weight: bold;
+  font-size: 4.375rem;
+}
+
+.hero__subtitle {
+  margin-top: 23px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+}
+
+.hero__image {
+  display: none;
+}
+
+.hero__btn {
+  padding: 1rem 6rem;
+  margin-top: 4.0625rem;
+  display: block;
+  max-width: 18.4375rem;
+  position: relative;
+
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 29px;
+
+  color: #f2f2f2;
+  border: none;
+  background: #ff352b;
+  cursor: pointer;
+
+  transition: background-color 0.5s ease-in, color 0.5s ease-in;
+}
+
+.hero__btn::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 2px solid #fefefe;
+
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: -1;
+
+  transition: background-color 0.5s ease-in;
+}
+
+.hero__btn:hover {
+  background-color: #ff772b;
+  color: #ffffff;
+}
+
+.hero__btn:hover::before {
+  background-color: #fff;
+}
+
+.hero__picture-block {
+  margin-top: 20px;
+  width: 550px;
+}
+
+.hero__picture {
+  max-width: 100%;
+}
+
+.hero__advantages {
+  margin-top: 65px;
+}
+
+.advantages {
+  max-width: 560px;
+}
+
+.advantages__list {
+  display: flex;
+}
+
+.advantages__item {
+  max-width: 190px;
+  display: flex;
+  align-items: center;
+}
+
+.advantages__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.advantages__image {
+  margin-right: 10px;
+}
+
+.advantages__text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #333333;
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-top: 27px;
+  }
+  .header__logo {
+    font-size: 1em;
+    line-height: 1.25rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .header__phone {
+    display: none;
+  }
+
+  .burger {
+    display: inline-block;
+  }
+
+  .hero {
+    padding-top: 64px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    min-height: 600px;
+    background-image: none;
+  }
+
+  .hero__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__title {
+    font-size: 1.75rem;
+    max-width: 205px;
+    text-align: center;
+  }
+
+  .hero__subtitle {
+    font-size: 1.75rem;
+    max-width: 205px;
+    text-align: center;
+  }
+
+  .hero__btn::before {
+    display: none;
+  }
+
+  .hero__image {
+    display: block;
+  }
+
+  .hero__btn {
+    margin-top: 0;
+  }
+
+  .advantages {
+    display: none;
+  }
+}

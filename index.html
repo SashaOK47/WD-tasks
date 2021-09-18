@@ -4,9 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header__wrapper wrapper">
+            <a class="header__logo  logo">MOVEE</a>
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Цены</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Автопарк</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Отзывы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+                
+            </nav>
+
+            <button class="burger" type="button" aria-label="Open menu">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+            
+            <a class="header__phone" href="tel:80299991213">8(029)-999-12-13</a>
+        </div><!-- /.wrapper -->
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="hero__wrapper wrapper">
+                <h1 class="hero__title">Квартирные переезды</h1>
+                <p class="hero__subtitle">По Бресту и области</p>
+                <img class="hero__image" src="./img/man-with-box.png" alt="Man with box" >
+                <button class="hero__btn">Заказать</button>
+
+                <div class="hero__advantages  advantages">
+                    <ul class="advantages__list">
+                        <li class="advantages__item">
+                            <img src="./img/truck.svg" alt="Image Truck" class="advantages__image">
+                            <p class="advantages__text">Более 800
+                                переездов</p>
+                        </li>
+                        <li class="advantages__item">
+                            <img src="./img/trigger.svg" alt="Image Truck" class="advantages__image">
+                            <p class="advantages__text">Бережная 
+                                упаковка</p>
+                        </li>
+                        <li class="advantages__item">
+                            <img src="./img/money.png" alt="Image Money" class="advantages__image">
+                            <p class="advantages__text">Фиксированная
+                                цена</p>
+                        </li>
+                    </ul>
+                </div><!-- /.advantages -->
+                
+            </div><!-- /.hero__wrapper wrapper -->
+            
+            
+        </section>
+    </main>
 </body>
 </html>
