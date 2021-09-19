@@ -1,7 +1,7 @@
 :root {
   --color-black: #333333;
   --color-accent: #fed100;
-  --font-color: #333333;
+  --color-red: #ff352b;
   --font-family: 'Montserrat', sans-serif;
 }
 
@@ -10,20 +10,22 @@
 *::after {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
 }
 
 html,
 body {
+  width: 100%;
+  height: 100%;
+
   font-size: 16px;
   font-family: var(--font-family);
 }
 
-.wrapper {
-  min-width: 20rem;
-  max-width: 83.125rem;
+.container {
+  max-width: 79.375rem;
   padding: 0 0.9375rem;
-  box-sizing: border-box;
   margin: 0 auto;
 }
 
@@ -31,6 +33,7 @@ body {
 .header {
   margin-top: 2.5rem;
   width: 100%;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -40,18 +43,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   position: relative;
 }
 
 .header__logo {
   margin-right: 1rem;
+
   font-weight: 600;
   font-size: 1.875rem;
   line-height: 2.3125rem;
   color: var(--color-black);
-}
-
-.menu {
 }
 
 .menu__list {
@@ -60,7 +62,7 @@ body {
   flex-wrap: wrap;
 }
 
-.menu__item:not(:last-child) {
+.menu__item {
   margin-right: 3.125rem;
 }
 
@@ -71,17 +73,24 @@ body {
   line-height: 1.375rem;
   color: var(--color-black);
   text-decoration: none;
+
+  transition: color 0.5s;
+}
+
+.menu__link:hover,
+.menu__link:focus {
+  color: var(--color-red);
 }
 
 .burger {
   display: none;
   width: 2.75rem;
-  background-color: red;
 
   background-color: transparent;
   border: none;
 
   line-height: 0.625rem;
+
   position: absolute;
   right: 1rem;
   top: -0.75rem;
@@ -91,6 +100,7 @@ body {
   display: inline-block;
   width: 100%;
   height: 0.125rem;
+
   background-color: #000;
 }
 
@@ -102,35 +112,52 @@ body {
   text-decoration: none;
   color: var(--color-black);
 
-  border-bottom: 1px solid var(--color-black);
+  border-bottom: 0.0625rem solid var(--color-black);
+
+  transition: color 0.5s, border-color 0.5s;
+}
+
+.header__phone:hover,
+.header__phone:focus {
+  color: var(--color-red);
+
+  border-color: var(--color-red);
 }
 
 /* HERO */
 
 .hero {
-  padding-top: 140px;
-  padding-bottom: 83px;
-  min-height: 650px;
-  background: url('../img/man.png') 72% 40px no-repeat;
+  min-height: 40.625rem;
+  padding-top: 8.75rem;
+  padding-bottom: 5.1875rem;
+
+  background: url('../img/man.png') 72% 100% no-repeat;
   background-color: var(--color-accent);
+
   position: relative;
   z-index: 1;
 }
 
 .hero__title {
-  max-width: 550px;
+  max-width: 34.375rem;
+
   font-weight: bold;
   font-size: 4.375rem;
 }
 
 .hero__subtitle {
-  margin-top: 23px;
+  margin-top: 1.4375rem;
+
   font-weight: 600;
-  font-size: 30px;
-  line-height: 37px;
+  font-size: 1.875rem;
+  line-height: 2.3125rem;
 }
 
-.hero__image {
+.hero__image img {
+  display: none;
+}
+
+.hero__image-text {
   display: none;
 }
 
@@ -139,16 +166,17 @@ body {
   margin-top: 4.0625rem;
   display: block;
   max-width: 18.4375rem;
+
   position: relative;
 
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 1.5rem;
-  line-height: 29px;
-
+  line-height: 1.8125rem;
   color: #f2f2f2;
+
   border: none;
-  background: #ff352b;
+  background: var(--color-red);
   cursor: pointer;
 
   transition: background-color 0.5s ease-in, color 0.5s ease-in;
@@ -159,19 +187,22 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+
   background-color: transparent;
-  border: 2px solid #fefefe;
+  border: 0.125rem solid #fefefe;
 
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0.625rem;
+  left: 0.625rem;
   z-index: -1;
 
   transition: background-color 0.5s ease-in;
 }
 
-.hero__btn:hover {
+.hero__btn:hover,
+.hero__btn:focus {
   background-color: #ff772b;
+
   color: #ffffff;
 }
 
@@ -179,21 +210,12 @@ body {
   background-color: #fff;
 }
 
-.hero__picture-block {
-  margin-top: 20px;
-  width: 550px;
-}
-
-.hero__picture {
-  max-width: 100%;
-}
-
 .hero__advantages {
-  margin-top: 65px;
+  margin-top: 4.0625rem;
 }
 
 .advantages {
-  max-width: 560px;
+  max-width: 35rem;
 }
 
 .advantages__list {
@@ -201,30 +223,52 @@ body {
 }
 
 .advantages__item {
-  max-width: 190px;
+  max-width: 11.875rem;
   display: flex;
   align-items: center;
 }
 
 .advantages__item:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 2.5rem;
 }
 
 .advantages__image {
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 
 .advantages__text {
   font-weight: normal;
-  font-size: 16px;
-  line-height: 21px;
-
+  font-size: 1rem;
+  line-height: 1.3125rem;
   color: #333333;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .header__logo {
+    margin-right: 0.6rem;
+
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .header__phone {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .menu__item {
+    margin-right: 3rem;
+  }
+
+  .menu__link {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
   .header {
-    margin-top: 27px;
+    margin-top: 1.6875rem;
   }
   .header__logo {
     font-size: 1em;
@@ -244,12 +288,10 @@ body {
   }
 
   .hero {
-    padding-top: 64px;
-    padding-bottom: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 6.25rem 0.9375rem 2.5rem 0.9375rem;
     margin: 0 auto;
-    min-height: 600px;
+    min-height: 37.5rem;
+
     background-image: none;
   }
 
@@ -261,14 +303,6 @@ body {
   }
 
   .hero__title {
-    font-size: 1.75rem;
-    max-width: 205px;
-    text-align: center;
-  }
-
-  .hero__subtitle {
-    font-size: 1.75rem;
-    max-width: 205px;
     text-align: center;
   }
 
@@ -277,7 +311,27 @@ body {
   }
 
   .hero__image {
+    position: relative;
+  }
+
+  .hero__image img {
+    max-width: 100%;
     display: block;
+  }
+
+  .hero__image-text {
+    display: block;
+
+    position: absolute;
+    left: 5rem;
+    bottom: 2.8125rem;
+
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: #121611;
+
+    transform: rotate(-7deg);
   }
 
   .hero__btn {
@@ -286,5 +340,30 @@ body {
 
   .advantages {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 4rem;
+  }
+
+  .hero__title {
+    max-width: 12.8125rem;
+
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+
+  .hero__subtitle {
+    margin-top: 0.3125rem;
+
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
+  .hero__image {
+    margin-top: -2rem;
   }
 }
