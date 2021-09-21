@@ -175,7 +175,64 @@ body {
 .banner__block-picture > img {
   max-width: 100%;
 }
-
+.services__wrapper {
+  padding-top: 95px;
+}
+.services__title {
+  margin-bottom: 3.75rem;
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 2.3125rem;
+  text-align: center;
+}
+.services__list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.services__item {
+  max-width: 30rem;
+  margin-bottom: 56px;
+  display: flex;
+}
+.services__item-mumber {
+  margin-right: 2.5rem;
+  font-weight: 300;
+  font-size: 3.125rem;
+  line-height: 3.75rem;
+  position: relative;
+}
+.services__item-mumber::before {
+  content: '01';
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 300;
+  font-size: 3.125rem;
+  line-height: 3.75rem;
+  color: var(--color-accent);
+  transform: translateX(2px);
+  z-index: -1;
+}
+.services__item-mumber--two::before {
+  content: '02';
+}
+.services__item-mumber--three::before {
+  content: '03';
+}
+.services__item-mumber--four::before {
+  content: '04';
+}
+.services__item-title {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+.services__item-description {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
 @media (max-width: 1200px) {
   .banner {
     display: block;
@@ -205,6 +262,9 @@ body {
     font-size: 4rem;
     line-height: 4.6rem;
   }
+  /* .services__wrapper {
+    padding: 75px 50px;
+  } */
 }
 @media (max-width: 768px) {
   .burger {
@@ -285,6 +345,9 @@ body {
   .banner__block-picture {
     margin-top: -5rem;
   }
+  .services__item {
+    align-items: center;
+  }
 }
 @media (max-width: 480px) {
   .intro {
@@ -344,6 +407,35 @@ body {
     line-height: 24px;
   }
   .banner__btn::before {
+    display: none;
+  }
+  .services__wrapper {
+    padding-top: 40px;
+    padding-bottom: 52px;
+  }
+
+  .services__title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 45px;
+  }
+  .services__item {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .services__item:last-child {
+    margin-bottom: 0;
+  }
+  .services__item-title {
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .services__item-mumber {
+    margin-right: 30px;
+  }
+  .services__item-description {
     display: none;
   }
 }
