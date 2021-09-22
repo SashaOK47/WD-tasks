@@ -35,13 +35,13 @@
               </li>
             </ul>
           </nav>
-          <div
+          <button
             class="header__burger burger"
             type="button"
             aria-label="Открыть меню"
           >
             <span class="burger__line"></span>
-          </div>
+          </button>
           <a class="header__phone" href="tel:80299991213">8(029)-999-12-13</a>
         </header>
         <section class="banner">
@@ -97,9 +97,9 @@
               <li class="services__item">
                 <p class="services__item-mumber">01</p>
                 <div class="services__item-info">
-                  <h4 class="services__item-title">
+                  <p class="services__item-title">
                     Оценка объема предстоящих работ
-                  </h4>
+                  </p>
                   <p class="services__item-description">
                     Стоимость переезда зависит от количества комнат, вещей и
                     мебели.
@@ -111,7 +111,7 @@
                   02
                 </p>
                 <div class="services__item-info">
-                  <h4 class="services__item-title">Упаковка вещей</h4>
+                  <p class="services__item-title">Упаковка вещей</p>
                   <p class="services__item-description">
                     Упаковываем вещи в коробки, подписываем. Габаритное и
                     деликатное, упаковываем отдельно.
@@ -123,9 +123,9 @@
                   03
                 </p>
                 <div class="services__item-info">
-                  <h4 class="services__item-title">
+                  <p class="services__item-title">
                     Погрузка и транспортировка вещей
-                  </h4>
+                  </p>
                   <p class="services__item-description">
                     В нашем автопарке имеются машины, подходящие для мебели
                     любых габаритов.
@@ -137,9 +137,9 @@
                   04
                 </p>
                 <div class="services__item-info">
-                  <h4 class="services__item-title">
+                  <p class="services__item-title">
                     Распаковка и расстановка мебели
-                  </h4>
+                  </p>
                   <p class="services__item-description">
                     Опытные грузчики быстро расставят мебель и уберут мусор от
                     распаковки.
@@ -156,40 +156,40 @@
           <p class="price__subtitle">
             Фиксированная стоимость на переезд под ключ
           </p>
-          <div class="price__tariffs tariffs-cards">
-            <ul class="tariffs-cards__list">
-              <li class="tariffs-cards__item card-item">
-                <h5 class="card-item__title">1-комнатная кв-ра</h5>
-                <ul class="card-item__services">
-                  <li class="card-item__service">1 фургон</li>
-                  <li class="card-item__service">2 грузчика</li>
-                  <li class="card-item__service">Переезд за 4 часа</li>
+          <div class="price__tariffs tariffs">
+            <div class="tariffs__cards">
+              <div class="tariffs__card">
+                <p class="tariffs__card-title">1-комнатная кв-ра</p>
+                <ul class="tariffs__card-services">
+                  <li class="tariffs__card-service">1 фургон</li>
+                  <li class="tariffs__card-service">2 грузчика</li>
+                  <li class="tariffs__card-service">Переезд за 4 часа</li>
                 </ul>
-                <p class="card-item__price">70 руб.</p>
-                <button class="card-item__button">Заказать</button>
-              </li>
-              <li class="tariffs-cards__item card-item">
-                <h5 class="card-item__title">2-комнатная кв-ра</h5>
-                <ul class="card-item__services">
-                  <li class="card-item__service">1 газель - 3 метра</li>
-                  <li class="card-item__service">2 грузчика</li>
-                  <li class="card-item__service">Переезд за 4 часа</li>
+                <p class="tariffs__card-price">70 руб.</p>
+                <button class="tariffs__card-button">Заказать</button>
+              </div>
+              <div class="tariffs__card">
+                <p class="tariffs__card-title">2-комнатная кв-ра</p>
+                <ul class="tariffs__card-services">
+                  <li class="tariffs__card-service">1 газель - 3 метра</li>
+                  <li class="tariffs__card-service">2 грузчика</li>
+                  <li class="tariffs__card-service">Переезд за 4 часа</li>
                 </ul>
-                <p class="card-item__price">100 руб.</p>
-                <button class="card-item__button">Заказать</button>
-              </li>
-              <li class="tariffs-cards__item card-item">
-                <h5 class="card-item__title">3-комнатная кв-ра</h5>
-                <ul class="card-item__services">
-                  <li class="card-item__service">1 газель - 4 метра</li>
-                  <li class="card-item__service">2 грузчика</li>
-                  <li class="card-item__service">Переезд за 6 часа</li>
+                <p class="tariffs__card-price">100 руб.</p>
+                <button class="tariffs__card-button">Заказать</button>
+              </div>
+              <div class="tariffs__card">
+                <p class="tariffs__card-title">3-комнатная кв-ра</p>
+                <ul class="tariffs__card-services">
+                  <li class="tariffs__card-service">1 газель - 4 метра</li>
+                  <li class="tariffs__card-service">2 грузчика</li>
+                  <li class="tariffs__card-service">Переезд за 6 часа</li>
                 </ul>
-                <p class="card-item__price">150 руб.</p>
-                <button class="card-item__button">Заказать</button>
-              </li>
-              <button class="tariffs-cards__prices">Все цены</button>
-            </ul>
+                <p class="tariffs__card-price">150 руб.</p>
+                <button class="tariffs__card-button">Заказать</button>
+              </div>
+              <button class="tariffs__cards-prices">Все цены</button>
+            </div>
           </div>
         </div>
       </section>
@@ -209,7 +209,7 @@
           <ul class="cars__slider-list">
             <li class="cars__slider-item">
               <div class="cars__slider-info car-info">
-                <h5 class="car-info__title">Газель 3 метра</h5>
+                <p class="car-info__title">Газель 3 метра</p>
                 <ul class="car-info__list">
                   <li class="car-info__item">Ширина 2 м</li>
                   <li class="car-info__item">Высота 2 м</li>
@@ -225,7 +225,7 @@
             </li>
             <li class="cars__slider-item">
               <div class="cars__slider-info car-info">
-                <h5 class="car-info__title">Каблук 2 метра</h5>
+                <p class="car-info__title">Каблук 2 метра</p>
                 <ul class="car-info__list">
                   <li class="car-info__item">Ширина 1.8 м</li>
                   <li class="car-info__item">Высота 1.2 м</li>
@@ -241,7 +241,7 @@
             </li>
             <li class="cars__slider-item">
               <div class="cars__slider-info car-info">
-                <h5 class="car-info__title">Грузовик 3 метра</h5>
+                <p class="car-info__title">Грузовик 3 метра</p>
                 <ul class="car-info__list">
                   <li class="car-info__item">Ширина 3 м</li>
                   <li class="car-info__item">Высота 3 м</li>

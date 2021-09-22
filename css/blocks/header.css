@@ -1,0 +1,50 @@
+.header {
+  min-height: 2.5rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__burger {
+  display: none;
+}
+.header__phone {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  text-decoration: none;
+  border-bottom: 1px solid #333333;
+  color: var(--color-black);
+  transition: color 0.5s ease, border-color 0.5s ease;
+}
+.header__phone:hover,
+.header__phone:focus {
+  color: var(--color-orange);
+  border-color: var(--color-orange);
+}
+@media (max-width: 768px) {
+  .header__phone {
+    display: none;
+  }
+  .header__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--color-accent);
+    padding: 4.375rem 0.625rem 1.25rem 0.625rem;
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  .header__menu.active {
+    right: 0;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    margin-bottom: 1rem;
+  }
+}

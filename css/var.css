@@ -1,0 +1,9 @@
+:root {
+  --color-accent: #fed100;
+  --color-black: #333333;
+  --color-white: #f2f2f2;
+  --color-red: #ff352b;
+  --color-orange: #ff772b;
+  --color-border: #ebebeb;
+  --color-shadow: rgba(0, 0, 0, 0.15);
+}

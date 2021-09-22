@@ -1,0 +1,27 @@
+.advantages {
+  max-width: 35rem;
+}
+.advantages__list {
+  display: flex;
+}
+.advantages__item {
+  max-width: 11.875rem;
+  display: flex;
+  align-items: center;
+}
+.advantages__item:not(:last-child) {
+  margin-right: 2.5rem;
+}
+.advantages__image {
+  margin-right: 0.625rem;
+}
+.advantages__text {
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  color: var(--color-black);
+}
+@media (max-width: 1200px) {
+  .advantages__item {
+    text-align: left;
+  }
+}
