@@ -1,0 +1,105 @@
+.reviews {
+  padding-top: 6.25rem;
+  padding-bottom: 5.625rem;
+  text-align: center;
+  background-color: var(--color-accent);
+}
+.reviews__title {
+  margin-bottom: 3.75rem;
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.reviews__list {
+  margin-bottom: 3.75rem;
+  display: flex;
+}
+.reviews__item {
+  text-align: left;
+  display: 0 1 26.25rem;
+}
+.reviews__item:not(:last-child) {
+  margin-right: 1.25rem;
+}
+.reviews__name {
+  margin-bottom: 0.625rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+.reviews__date {
+  display: inline-block;
+  margin-right: 0.625rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+.reviews__ratio::before {
+  content: '★★★★★';
+  font-size: 1rem;
+  color: var(--color-red);
+}
+.reviews__comment {
+  margin-bottom: 1.125rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+.reviews__more {
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.reviews__button {
+  display: inline-block;
+  padding: 0.8125rem 4rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: var(--color-black);
+  border: 0.0625rem solid var(--color-black);
+  transition: background-color 0.5s ease, border-color 0.5s ease,
+    color 0.5s ease;
+}
+.reviews__button:hover,
+.reviews__button:focus {
+  background-color: var(--color-orange);
+  border-color: transparent;
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .reviews__list {
+    flex-wrap: wrap;
+  }
+  .reviews__item {
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .reviews {
+    padding-top: 2.5rem;
+    padding-bottom: 3.125rem;
+  }
+  .reviews__title {
+    margin-bottom: 2.5rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  .reviews__list {
+    margin-bottom: 1.125rem;
+  }
+  .revies__name {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+  .reviews__item:not(:first-child) {
+    display: none;
+  }
+  .reviews__button {
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem;
+    width: 100%;
+  }
+}

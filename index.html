@@ -93,8 +93,8 @@
         <div class="container">
           <div class="services__wrapper">
             <h2 class="services__title">Как это происходит?</h2>
-            <ul class="services__list">
-              <li class="services__item">
+            <div class="services__list">
+              <div class="services__item">
                 <p class="services__item-mumber">01</p>
                 <div class="services__item-info">
                   <p class="services__item-title">
@@ -105,8 +105,8 @@
                     мебели.
                   </p>
                 </div>
-              </li>
-              <li class="services__item">
+              </div>
+              <div class="services__item">
                 <p class="services__item-mumber services__item-mumber--two">
                   02
                 </p>
@@ -117,8 +117,8 @@
                     деликатное, упаковываем отдельно.
                   </p>
                 </div>
-              </li>
-              <li class="services__item">
+              </div>
+              <div class="services__item">
                 <p class="services__item-mumber services__item-mumber--three">
                   03
                 </p>
@@ -131,8 +131,8 @@
                     любых габаритов.
                   </p>
                 </div>
-              </li>
-              <li class="services__item">
+              </div>
+              <div class="services__item">
                 <p class="services__item-mumber services__item-mumber--four">
                   04
                 </p>
@@ -145,8 +145,8 @@
                     распаковки.
                   </p>
                 </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -199,15 +199,38 @@
           <p class="cars__subtitle">
             10 видов автомобилей от 800 кг до 10 тонн
           </p>
-          <div class="cars__tabs">
-            <button class="cars__tab cars__tab--active" type="button">
-              Газели
-            </button>
-            <button class="cars__tab" type="button">Каблуки</button>
-            <button class="cars__tab" type="button">Грузовики</button>
+          <div class="cars__tabs tabs">
+            <input
+              class="tabs__input tabs__input--one"
+              id="gazelles"
+              type="radio"
+              name="car"
+              checked
+            />
+            <input
+              class="tabs__input tabs__input--two"
+              id="heels"
+              type="radio"
+              name="car"
+            />
+            <input
+              class="tabs__input tabs__input--three"
+              id="trucks"
+              type="radio"
+              name="car"
+            />
+            <label class="tabs__label tabs__label--one" for="gazelles"
+              >Газели</label
+            >
+            <label class="tabs__label tabs__label--two" for="heels"
+              >Каблуки</label
+            >
+            <label class="tabs__label tabs__label--three" for="trucks"
+              >Грузовики</label
+            >
           </div>
-          <ul class="cars__slider-list">
-            <li class="cars__slider-item">
+          <div class="cars__slider-list">
+            <div class="cars__slider-item">
               <div class="cars__slider-info car-info">
                 <p class="car-info__title">Газель 3 метра</p>
                 <ul class="car-info__list">
@@ -222,8 +245,8 @@
               <div class="cars__slider-image">
                 <img src="./img/car-shadow.png" alt="" />
               </div>
-            </li>
-            <li class="cars__slider-item">
+            </div>
+            <div class="cars__slider-item">
               <div class="cars__slider-info car-info">
                 <p class="car-info__title">Каблук 2 метра</p>
                 <ul class="car-info__list">
@@ -238,8 +261,8 @@
               <div class="cars__slider-image">
                 <img src="./img/car-2.png" alt="" />
               </div>
-            </li>
-            <li class="cars__slider-item">
+            </div>
+            <div class="cars__slider-item">
               <div class="cars__slider-info car-info">
                 <p class="car-info__title">Грузовик 3 метра</p>
                 <ul class="car-info__list">
@@ -254,7 +277,7 @@
               <div class="cars__slider-image">
                 <img src="./img/car-3.png" alt="" />
               </div>
-            </li>
+            </div>
             <button
               class="cars__slider-arrow cars__slider-arrow--left"
               type="button"
@@ -267,24 +290,67 @@
             >
               <img src="./img/arrow.svg" alt="Arrow right" />
             </button>
-            <div class="cars__slider-dots">
-              <button
-                class="cars__slider-dot cars__slider-dot--active"
-                type="button"
-              ></button>
-              <button class="cars__slider-dot" type="button"></button>
-              <button class="cars__slider-dot" type="button"></button>
-              <button class="cars__slider-dot" type="button"></button>
-              <button class="cars__slider-dot" type="button"></button>
+            <div class="cars__slider-dots slider-dots">
+              <input
+                class="slider-dots__input slider-dots__input--one"
+                type="radio"
+                name="slider-dot"
+                id="slider-dot--one"
+                checked
+              />
+              <input
+                class="slider-dots__input slider-dots__input--two"
+                type="radio"
+                name="slider-dot"
+                id="slider-dot--two"
+              />
+              <input
+                class="slider-dots__input slider-dots__input--three"
+                type="radio"
+                name="slider-dot"
+                id="slider-dot--three"
+              />
+              <input
+                class="slider-dots__input slider-dots__input--four"
+                type="radio"
+                name="slider-dot"
+                id="slider-dot--four"
+              />
+              <input
+                class="slider-dots__input slider-dots__input--five"
+                type="radio"
+                name="slider-dot"
+                id="slider-dot--five"
+              />
+              <label
+                class="slider-dots__label slider-dots__label--one"
+                for="slider-dot--one"
+              ></label>
+              <label
+                class="slider-dots__label slider-dots__label--two"
+                for="slider-dot--two"
+              ></label>
+              <label
+                class="slider-dots__label slider-dots__label--three"
+                for="slider-dot--three"
+              ></label>
+              <label
+                class="slider-dots__label slider-dots__label--four"
+                for="slider-dot--four"
+              ></label>
+              <label
+                class="slider-dots__label slider-dots__label--five"
+                for="slider-dot--five"
+              ></label>
             </div>
-          </ul>
+          </div>
         </div>
       </section>
       <section class="reviews">
         <div class="container">
           <h2 class="reviews__title">Отзывы</h2>
-          <ul class="reviews__list">
-            <li class="reviews__item">
+          <div class="reviews__list">
+            <div class="reviews__item">
               <p class="reviews__name">Ирина</p>
               <time class="reviews__date" datetime="2019-03-24"
                 >24.03.2019</time
@@ -298,8 +364,8 @@
                 что ему огромное...
               </p>
               <span class="reviews__more">Читать полностью</span>
-            </li>
-            <li class="reviews__item">
+            </div>
+            <div class="reviews__item">
               <p class="reviews__name">Светлана Васильевна</p>
               <time class="reviews__date" datetime="2019-09-13"
                 >13.09.2019</time
@@ -313,8 +379,8 @@
                 Когда....
               </p>
               <span class="reviews__more">Читать полностью</span>
-            </li>
-            <li class="reviews__item">
+            </div>
+            <div class="reviews__item">
               <p class="reviews__name">Ольга Петрова</p>
               <time class="reviews__date" datetime="2019-11-11"
                 >11.11.2019</time
@@ -328,8 +394,8 @@
                 за его...
               </p>
               <span class="reviews__more">Читать полностью</span>
-            </li>
-          </ul>
+            </div>
+          </div>
           <a class="reviews__button" href="#">Все отзывы</a>
         </div>
       </section>
