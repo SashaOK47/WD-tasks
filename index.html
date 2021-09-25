@@ -22,26 +22,26 @@
           <nav class="header__menu menu">
             <ul class="menu__list">
               <li class="menu__item">
-                <a href="" class="menu__link">Цены</a>
+                <a class="menu__link" href="#">Цены</a>
               </li>
               <li class="menu__item">
-                <a href="" class="menu__link">Автопарк</a>
+                <a class="menu__link" href="#">Автопарк</a>
               </li>
               <li class="menu__item">
-                <a href="" class="menu__link">Отзывы</a>
+                <a class="menu__link" href="#">Отзывы</a>
               </li>
               <li class="menu__item">
-                <a href="" class="menu__link">Контакты</a>
+                <a class="menu__link" href="#">Контакты</a>
               </li>
             </ul>
           </nav>
-          <div
+          <button
             class="header__burger burger"
             type="button"
             aria-label="Открыть меню"
           >
             <span class="burger__line"></span>
-          </div>
+          </button>
           <a class="header__phone" href="tel:80299991213">8(029)-999-12-13</a>
         </header>
         <section class="banner">
@@ -88,7 +88,318 @@
         </section>
       </div>
     </div>
-    <main></main>
+    <main>
+      <section class="services">
+        <div class="container">
+          <div class="services__wrapper">
+            <h2 class="services__title">Как это происходит?</h2>
+            <div class="services__list">
+              <div class="services__item">
+                <p class="services__item-mumber">01</p>
+                <div class="services__item-info">
+                  <p class="services__item-title">
+                    Оценка объема предстоящих работ
+                  </p>
+                  <p class="services__item-description">
+                    Стоимость переезда зависит от количества комнат, вещей и
+                    мебели.
+                  </p>
+                </div>
+              </div>
+              <div class="services__item">
+                <p class="services__item-mumber services__item-mumber--two">
+                  02
+                </p>
+                <div class="services__item-info">
+                  <p class="services__item-title">Упаковка вещей</p>
+                  <p class="services__item-description">
+                    Упаковываем вещи в коробки, подписываем. Габаритное и
+                    деликатное, упаковываем отдельно.
+                  </p>
+                </div>
+              </div>
+              <div class="services__item">
+                <p class="services__item-mumber services__item-mumber--three">
+                  03
+                </p>
+                <div class="services__item-info">
+                  <p class="services__item-title">
+                    Погрузка и транспортировка вещей
+                  </p>
+                  <p class="services__item-description">
+                    В нашем автопарке имеются машины, подходящие для мебели
+                    любых габаритов.
+                  </p>
+                </div>
+              </div>
+              <div class="services__item">
+                <p class="services__item-mumber services__item-mumber--four">
+                  04
+                </p>
+                <div class="services__item-info">
+                  <p class="services__item-title">
+                    Распаковка и расстановка мебели
+                  </p>
+                  <p class="services__item-description">
+                    Опытные грузчики быстро расставят мебель и уберут мусор от
+                    распаковки.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="price">
+        <div class="container">
+          <h2 class="price__title">Цены</h2>
+          <p class="price__subtitle">
+            Фиксированная стоимость на переезд под ключ
+          </p>
+          <div class="price__tariffs tariffs">
+            <div class="tariffs__cards">
+              <div class="tariffs__card">
+                <p class="tariffs__card-title">1-комнатная кв-ра</p>
+                <ul class="tariffs__card-services">
+                  <li class="tariffs__card-service">1 фургон</li>
+                  <li class="tariffs__card-service">2 грузчика</li>
+                  <li class="tariffs__card-service">Переезд за 4 часа</li>
+                </ul>
+                <p class="tariffs__card-price">70 руб.</p>
+                <button class="tariffs__card-button">Заказать</button>
+              </div>
+              <div class="tariffs__card">
+                <p class="tariffs__card-title">2-комнатная кв-ра</p>
+                <ul class="tariffs__card-services">
+                  <li class="tariffs__card-service">1 газель - 3 метра</li>
+                  <li class="tariffs__card-service">2 грузчика</li>
+                  <li class="tariffs__card-service">Переезд за 4 часа</li>
+                </ul>
+                <p class="tariffs__card-price">100 руб.</p>
+                <button class="tariffs__card-button">Заказать</button>
+              </div>
+              <div class="tariffs__card">
+                <p class="tariffs__card-title">3-комнатная кв-ра</p>
+                <ul class="tariffs__card-services">
+                  <li class="tariffs__card-service">1 газель - 4 метра</li>
+                  <li class="tariffs__card-service">2 грузчика</li>
+                  <li class="tariffs__card-service">Переезд за 6 часа</li>
+                </ul>
+                <p class="tariffs__card-price">150 руб.</p>
+                <button class="tariffs__card-button">Заказать</button>
+              </div>
+              <button class="tariffs__cards-prices">Все цены</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cars">
+        <div class="container">
+          <h2 class="cars__title">Автопарк</h2>
+          <p class="cars__subtitle">
+            10 видов автомобилей от 800 кг до 10 тонн
+          </p>
+          <div class="cars__tabs tabs">
+            <input
+              class="tabs__input tabs__input--one"
+              id="gazelles"
+              type="radio"
+              name="car"
+              checked
+            />
+            <input
+              class="tabs__input tabs__input--two"
+              id="heels"
+              type="radio"
+              name="car"
+            />
+            <input
+              class="tabs__input tabs__input--three"
+              id="trucks"
+              type="radio"
+              name="car"
+            />
+            <label class="tabs__label tabs__label--one" for="gazelles"
+              >Газели</label
+            >
+            <label class="tabs__label tabs__label--two" for="heels"
+              >Каблуки</label
+            >
+            <label class="tabs__label tabs__label--three" for="trucks"
+              >Грузовики</label
+            >
+          </div>
+          <div class="cars__slider-list">
+            <div class="cars__slider-item">
+              <div class="cars__slider-info car-info">
+                <p class="car-info__title">Газель 3 метра</p>
+                <ul class="car-info__list">
+                  <li class="car-info__item">Ширина 2 м</li>
+                  <li class="car-info__item">Высота 2 м</li>
+                  <li class="car-info__item">Объем 16 м³</li>
+                  <li class="car-info__item">Грузоподъемность 1,5 т</li>
+                </ul>
+                <p class="car-info__text">Газель 3 метра / 1,5 тонны</p>
+                <div class="car-info__button">Заказать</div>
+              </div>
+              <div class="cars__slider-image">
+                <img src="./img/car-shadow.png" alt="" />
+              </div>
+            </div>
+            <div class="cars__slider-item">
+              <div class="cars__slider-info car-info">
+                <p class="car-info__title">Каблук 2 метра</p>
+                <ul class="car-info__list">
+                  <li class="car-info__item">Ширина 1.8 м</li>
+                  <li class="car-info__item">Высота 1.2 м</li>
+                  <li class="car-info__item">Объем 8 м³</li>
+                  <li class="car-info__item">Грузоподъемность 0,8 т</li>
+                </ul>
+                <p class="car-info__text">Каблук 2 метра / 0,8 тонны</p>
+                <div class="car-info__button">Заказать</div>
+              </div>
+              <div class="cars__slider-image">
+                <img src="./img/car-2.png" alt="" />
+              </div>
+            </div>
+            <div class="cars__slider-item">
+              <div class="cars__slider-info car-info">
+                <p class="car-info__title">Грузовик 3 метра</p>
+                <ul class="car-info__list">
+                  <li class="car-info__item">Ширина 3 м</li>
+                  <li class="car-info__item">Высота 3 м</li>
+                  <li class="car-info__item">Объем 20 м³</li>
+                  <li class="car-info__item">Грузоподъемность 2 т</li>
+                </ul>
+                <p class="car-info__text">Грузовик 3 метра / 2 тонны</p>
+                <div class="car-info__button">Заказать</div>
+              </div>
+              <div class="cars__slider-image">
+                <img src="./img/car-3.png" alt="" />
+              </div>
+            </div>
+            <button
+              class="cars__slider-arrow cars__slider-arrow--left"
+              type="button"
+            >
+              <img src="./img/arrow.svg" alt="Arrow left" />
+            </button>
+            <button
+              class="cars__slider-arrow cars__slider-arrow--right"
+              type="button"
+            >
+              <img src="./img/arrow.svg" alt="Arrow right" />
+            </button>
+            <div class="cars__slider-dots slider-dots">
+              <input
+                class="slider-dots__input slider-dots__input--one"
+                type="radio"
+                name="slider-dot"
+                id="slider-dot--one"
+                checked
+              />
+              <input
+                class="slider-dots__input slider-dots__input--two"
+                type="radio"
+                name="slider-dot"
+                id="slider-dot--two"
+              />
+              <input
+                class="slider-dots__input slider-dots__input--three"
+                type="radio"
+                name="slider-dot"
+                id="slider-dot--three"
+              />
+              <input
+                class="slider-dots__input slider-dots__input--four"
+                type="radio"
+                name="slider-dot"
+                id="slider-dot--four"
+              />
+              <input
+                class="slider-dots__input slider-dots__input--five"
+                type="radio"
+                name="slider-dot"
+                id="slider-dot--five"
+              />
+              <label
+                class="slider-dots__label slider-dots__label--one"
+                for="slider-dot--one"
+              ></label>
+              <label
+                class="slider-dots__label slider-dots__label--two"
+                for="slider-dot--two"
+              ></label>
+              <label
+                class="slider-dots__label slider-dots__label--three"
+                for="slider-dot--three"
+              ></label>
+              <label
+                class="slider-dots__label slider-dots__label--four"
+                for="slider-dot--four"
+              ></label>
+              <label
+                class="slider-dots__label slider-dots__label--five"
+                for="slider-dot--five"
+              ></label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container">
+          <h2 class="reviews__title">Отзывы</h2>
+          <div class="reviews__list">
+            <div class="reviews__item">
+              <p class="reviews__name">Ирина</p>
+              <time class="reviews__date" datetime="2019-03-24"
+                >24.03.2019</time
+              >
+              <span class="reviews__ratio"></span>
+              <p class="reviews__comment">
+                Обращение к вам за помощью в переезде оставило только
+                положительные впечатления. Хотелось отметить замечательного
+                водителя газели Алексея. Были трудности с заездом во двор, он
+                проявил себя как компетентный и профессиональный сотрудник, за
+                что ему огромное...
+              </p>
+              <span class="reviews__more">Читать полностью</span>
+            </div>
+            <div class="reviews__item">
+              <p class="reviews__name">Светлана Васильевна</p>
+              <time class="reviews__date" datetime="2019-09-13"
+                >13.09.2019</time
+              >
+              <span class="reviews__ratio"></span>
+              <p class="reviews__comment">
+                Сегодня ( 13.09.2019 ) мы переехали. Остались очень довольны,
+                несмотря на то, что к нам опоздали на 1,5 часа. Морально были к
+                этому готовы ( в прошлый переезд в другой фирме тоже опоздали на
+                час). Водитель заранее позвонил, предупредил, что задерживается.
+                Когда....
+              </p>
+              <span class="reviews__more">Читать полностью</span>
+            </div>
+            <div class="reviews__item">
+              <p class="reviews__name">Ольга Петрова</p>
+              <time class="reviews__date" datetime="2019-11-11"
+                >11.11.2019</time
+              >
+              <span class="reviews__ratio"></span>
+              <p class="reviews__comment">
+                Могу на 100% порекомендовать компанию MOVEE и отметить, что цены
+                фиксированы, что упрощает расчет. Безо всяких заморочек, в
+                отличии от их конкурентов. Упаковали все качественно и быстро.
+                Все вещи приехали в сохранности. Особая благодарность Александру
+                за его...
+              </p>
+              <span class="reviews__more">Читать полностью</span>
+            </div>
+          </div>
+          <a class="reviews__button" href="#">Все отзывы</a>
+        </div>
+      </section>
+    </main>
     <script src="./js/main.js"></script>
   </body>
 </html>

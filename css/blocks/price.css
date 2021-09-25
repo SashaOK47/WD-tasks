@@ -1,0 +1,146 @@
+.price {
+  padding-top: 5rem;
+  margin-bottom: 6.25rem;
+}
+.price__title {
+  margin-bottom: 1rem;
+  font-size: 1.875rem;
+  line-height: 2.3125rem;
+  text-align: center;
+  font-weight: 600;
+}
+.price__subtitle {
+  margin-bottom: 3.75rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
+.tariffs__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tariffs__card {
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+  padding-top: 5.25rem;
+  padding-bottom: 4.875rem;
+  flex: 0 1 30%;
+  text-align: center;
+  border: 0.0625rem solid var(--color-border);
+  transition: border 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+}
+.tariffs__card:last-child {
+  margin-right: 0;
+}
+.tariffs__card:hover,
+.tariffs__card:focus {
+  border: 0.0625rem solid var(--color-accent);
+  box-shadow: 0 0.75rem 1.5rem var(--color-shadow);
+}
+.tariffs__card-title {
+  margin-bottom: 3.75rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+.tariffs__card-service {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+.tariffs__card-price {
+  margin-top: 3.75rem;
+  margin-top: 2.2rem;
+  margin-bottom: 3.25rem;
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.tariffs__card-button {
+  padding: 0.8125rem 4.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  background-color: var(--color-accent);
+  transition: background 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
+}
+.tariffs__card-button:hover,
+.tariffs__card-button:focus {
+  color: var(--color-white);
+  background: var(--color-accent);
+  box-shadow: 0 0.25rem 1.5rem var(--color-accent);
+}
+.tariffs__cards-prices {
+  display: none;
+}
+@media (max-width: 768px) {
+  .price__subtitle {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .tariffs__card:nth-child(1) {
+    display: none;
+  }
+  .tariffs__card:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .price {
+    padding-top: 3.125rem;
+  }
+  .price__title {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  .price__subtitle {
+    display: none;
+  }
+  .tariffs-__cards {
+    padding-bottom: 3.125rem;
+  }
+  .tariffs__card {
+    padding-top: 2.5rem;
+    padding-bottom: 1.875rem;
+    margin-bottom: 1rem;
+    margin-right: 0;
+    margin-top: 0;
+    border: none;
+    flex: 0 1 100%;
+  }
+  .tariffs__card-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+  .tariffs__card-service {
+    margin-bottom: 1rem;
+  }
+  .tariffs__cards-prices {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: var(--color-black);
+    cursor: pointer;
+    background: none;
+    border-bottom: 0.0625rem solid var(--color-black);
+  }
+  .tariffs__card-button {
+    display: inline-block;
+    padding: 1.125rem 6.25rem;
+    width: 100%;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    background-color: var(--color-accent);
+  }
+}
