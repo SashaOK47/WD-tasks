@@ -107,7 +107,7 @@
   display: block;
   width: 0.875rem;
   height: 0.875rem;
-  background: url('../img/check.svg');
+  background: url('../../img/check.svg');
   position: absolute;
   left: 0;
   top: 50%;

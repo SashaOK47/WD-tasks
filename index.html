@@ -399,7 +399,213 @@
           <a class="reviews__button" href="#">Все отзывы</a>
         </div>
       </section>
+      <section class="order">
+        <div class="container">
+          <div class="order__wrapper">
+            <h2 class="order__title">
+              Закажи переезд прямо сейчас <span>со скидкой %</span>
+            </h2>
+            <p class="order__subtitle">Мы перезвоним в течении 10 секунд</p>
+            <div class="order__form">
+              <form class="form" action="#">
+                <div class="form__body">
+                  <div class="form__contacts">
+                    <label
+                      class="form__contacts-label"
+                      for="contacts-name"
+                    ></label>
+                    <input
+                      class="form__contacts-name"
+                      id="contacts-name"
+                      type="text"
+                      placeholder="Ваше имя"
+                    />
+                    <label
+                      class="form__contacts-label"
+                      for="contacts-phone"
+                    ></label>
+                    <input
+                      class="form__contacts-phone"
+                      id="contacts-phone"
+                      type="tel"
+                      placeholder="Телефон"
+                    />
+                  </div>
+                  <div class="form__location">
+                    <div class="form__location-regions regions">
+                      <p class="regions__title">Укажите область</p>
+                      <div class="regions__wrapper">
+                        <select class="regions__select">
+                          <option
+                            class="www"
+                            value=""
+                            selected
+                            disabled
+                            default
+                          >
+                            Например: Минская
+                          </option>
+                          <option value="brest">Брестская</option>
+                          <option value="gomel">Гомельская</option>
+                          <option value="minsk">Минская</option>
+                          <option value="mogilev">Могилевская</option>
+                          <option value="vitebsk">Витебская</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form__location-cities cities">
+                      <p class="cities__title">Укажите город</p>
+                      <div class="cities__wrapper">
+                        <select class="cities__select">
+                          <option value="" disabled>Например: Минск</option>
+                          <option value="brest">Брест</option>
+                          <option value="gomel">Гомель</option>
+                          <option value="minsk">Минск</option>
+                          <option value="mogilev">Могилев</option>
+                          <option value="vitebsk">Витебск</option>
+                          <option value="moss" selected>Мозырь</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__payment payment">
+                    <p class="payment__title">Способ оплаты</p>
+                    <div class="payment__wrapper">
+                      <p class="payment__item">
+                        <input
+                          class="payment__input"
+                          id="cash"
+                          name="payment"
+                          type="radio"
+                        />
+                        <label class="payment__label" for="cash"
+                          >Наличными курьеру</label
+                        >
+                      </p>
+                      <p class="payment__item">
+                        <input
+                          class="payment__input"
+                          id="card"
+                          name="payment"
+                          type="radio"
+                          checked
+                        />
+                        <label class="payment__label" for="card"
+                          >Картой курьеру</label
+                        >
+                      </p>
+                      <p class="payment__item">
+                        <input
+                          class="payment__input"
+                          id="transfer"
+                          name="payment"
+                          type="radio"
+                        />
+                        <label class="payment__label" for="transfer"
+                          >Банковский перевод</label
+                        >
+                      </p>
+                    </div>
+                  </div>
+                  <div class="form__services additional-services">
+                    <p class="additional-services__title">
+                      Дополнительные услуги
+                    </p>
+                    <div class="additional-services__list">
+                      <p class="additional-services__item">
+                        <input
+                          class="additional-services__checkbox"
+                          id="measurer"
+                          name="measurer"
+                          type="checkbox"
+                        />
+                        <label class="additional-services__label" for="measurer"
+                          >Вызов замерщика</label
+                        >
+                      </p>
+                      <p class="additional-services__item">
+                        <input
+                          class="additional-services__checkbox"
+                          id="packaging"
+                          name="packaging"
+                          type="checkbox"
+                        />
+                        <label
+                          class="additional-services__label"
+                          for="packaging"
+                          >Упаковка для хрупких предметов</label
+                        >
+                      </p>
+                      <p class="additional-services__item">
+                        <input
+                          class="additional-services__checkbox"
+                          id="crane"
+                          name="crane"
+                          type="checkbox"
+                        />
+                        <label class="additional-services__label" for="crane"
+                          >Кран</label
+                        >
+                      </p>
+                      <p class="additional-services__item">
+                        <input
+                          class="additional-services__checkbox"
+                          id="furniture"
+                          name="furniture"
+                          type="checkbox"
+                          checked
+                        />
+                        <label
+                          class="additional-services__label"
+                          for="furniture"
+                          >Сборка мебели</label
+                        >
+                      </p>
+                      <p class="additional-services__item">
+                        <input
+                          class="additional-services__checkbox"
+                          id="bulky-items"
+                          name="bulky-items"
+                          type="checkbox"
+                          checked
+                        />
+                        <label
+                          class="additional-services__label"
+                          for="bulky-items"
+                          >Крупногабаритные предметы</label
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__footer">
+                  <div class="form__footer-left">
+                    <time class="form__footer-timer">05:37:25</time>
+                  </div>
+                  <div class="form__footer-right">
+                    <button class="form__footer-button">
+                      Заказать со скидой
+                    </button>
+                    <button class="form__footer-btn">Перезвонить мне</button>
+                    <input
+                      class="form__footer-checkbox"
+                      type="checkbox"
+                      id="footer-checkbox"
+                      checked
+                    />
+                    <label class="form__footer-agree" for="footer-checkbox"
+                      >Даю согласие на обработку данных</label
+                    >
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="map"></div>
     </main>
+    <footer class="footer"></footer>
     <script src="./js/main.js"></script>
   </body>
 </html>
