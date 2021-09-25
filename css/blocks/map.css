@@ -1,10 +1,42 @@
-/* .map {
-  max-width: 1920;
-  height: 666px;
-} */
 .map__wrapper {
   overflow: hidden;
+  position: relative;
 }
 .map__wrapper iframe {
   display: block;
+}
+.map__contacts {
+  display: none;
+}
+@media (max-width: 480px) {
+  .map__contacts {
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+  }
+  .map__contacts-city {
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .map__contacts-phone {
+    margin-bottom: 20px;
+    color: inherit;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .map__contacts-email {
+    width: 126px;
+    margin-bottom: 4px;
+    color: inherit;
+    font-size: 15px;
+    line-height: 20px;
+    border-bottom: 1px solid var(--color-black);
+  }
 }

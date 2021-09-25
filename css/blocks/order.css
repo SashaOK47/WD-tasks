@@ -325,6 +325,10 @@
     padding-top: 60px;
     padding-bottom: 70px;
   }
+  .order__wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
   .order__title span {
     display: none;
   }
@@ -344,22 +348,13 @@
     text-align: center;
   }
   .form__contacts {
-    text-align: center;
-  }
-  .form__contacts-name {
-    margin-right: 0;
-    margin-bottom: 2rem;
-  }
-}
-@media (max-width: 480px) {
-  .form__contacts {
     margin-bottom: 40px;
   }
   .form__contacts-name,
   .form__contacts-phone {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
   }
   .form__location {
     display: none;
