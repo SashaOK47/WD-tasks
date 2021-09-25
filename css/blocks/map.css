@@ -1,0 +1,10 @@
+/* .map {
+  max-width: 1920;
+  height: 666px;
+} */
+.map__wrapper {
+  overflow: hidden;
+}
+.map__wrapper iframe {
+  display: block;
+}

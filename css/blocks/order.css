@@ -320,7 +320,7 @@
 .form__footer-checkbox:checked + .form__footer-agree::after {
   opacity: 1;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .order {
     padding-top: 60px;
     padding-bottom: 70px;
@@ -337,11 +337,21 @@
     text-align: center;
   }
   .order__subtitle {
+    padding: 0;
     font-weight: normal;
     font-size: 15px;
     line-height: 20px;
-    padding: 0;
+    text-align: center;
   }
+  .form__contacts {
+    text-align: center;
+  }
+  .form__contacts-name {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 480px) {
   .form__contacts {
     margin-bottom: 40px;
   }
