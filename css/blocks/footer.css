@@ -1,5 +1,202 @@
 .footer {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
   background-color: var(--color-accent);
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer__info {
+  margin-right: 1rem;
+  max-width: 13.75rem;
+}
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 2.75rem;
+}
+.footer__politics {
+  margin-bottom: 2.25rem;
+  line-height: 1.25rem;
+  color: var(--color-black);
+}
+.footer__agreement {
+  line-height: 1.25rem;
+  color: var(--color-black);
+}
+.footer__menu {
+  margin-right: 1rem;
+}
+.footer-menu__item {
+  margin-bottom: 1rem;
+}
+.footer-menu__link {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: var(--color-black);
+  transition: color 0.5s ease;
+}
+.footer-menu__link:hover,
+.footer-menu__link:focus {
+  color: var(--color-orange);
+}
+.footer__social {
+  margin-right: 1rem;
+}
+.social__link {
+  display: inline-block;
+  margin-right: 1.875rem;
+}
+.social__link:last-of-type {
+  margin-right: 0;
+}
+.social__svg {
+  fill: var(--color-black);
+  transition: fill 0.5s ease;
+}
+.social__link:hover .social__svg,
+.social__link:focus .social__svg {
+  fill: var(--color-orange);
+}
+.social__email {
+  margin-bottom: 1.25rem;
+  margin-top: 2rem;
+}
+.social__email-link {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: var(--color-black);
+  border-bottom: 0.0625rem solid var(--color-black);
+  transition: color 0.5s ease, border-color 0.5s ease;
+}
+.social__email-link:hover,
+.social__email-link:focus {
+  color: var(--color-orange);
+  border-color: var(--color-orange);
+}
+.social__share {
+  max-width: 9.375rem;
+  text-align: center;
+}
+.social__share-title {
+  margin-bottom: 0.625rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+.social__share-link:not(:last-child) {
+  margin-right: 1.875rem;
+}
+.social__share-svg {
+  fill: var(--color-black);
+  transition: fill 0.5s ease;
+}
+.social__share-link:hover .social__share-svg,
+.social__share-link:focus .social__share-svg {
+  fill: var(--color-orange);
+}
+.footer__feedback {
+  text-align: center;
+}
+.feedback__btn {
+  display: none;
+}
+.feedback__button {
+  margin-bottom: 0.375rem;
+  display: block;
+  padding: 0.625rem 1.875rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: var(--color-black);
+  background: transparent;
+  border: 0.0625rem solid var(--color-black);
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+.feedback__button:hover,
+.feedback__button:focus {
+  background-color: var(--color-white);
+  border-color: transparent;
+}
+.feedback__phone {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: var(--color-black);
+  border-bottom: 0.0625rem solid var(--color-black);
+  transition: color 0.5s ease, border-color 0.5s ease;
+}
+.feedback__phone:hover,
+.feedback__phone:focus {
+  color: var(--color-orange);
+  border-color: var(--color-orange);
+}
+@media (max-width: 980px) {
+  .footer {
+    padding-top: 3.75rem;
+    padding-bottom: 3.125rem;
+  }
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__logo {
+    margin-bottom: 2.25rem;
+  }
+  .footer__info {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 2.875rem;
+    text-align: center;
+  }
+  .footer__politics {
+    margin-bottom: 1.125rem;
+  }
+  .footer__menu {
+    margin-right: 0;
+    margin-bottom: 1.875rem;
+    width: 100%;
+    text-align: center;
+  }
+  .footer__social {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .social__share {
+    margin-bottom: 1.25rem;
+    display: none;
+  }
+  .social__email {
+    margin-top: 1.25rem;
+    margin-bottom: 2.875rem;
+  }
+  .feedback__button {
+    display: none;
+  }
+  .feedback__btn {
+    display: block;
+    padding: 1.125rem 5.875rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    text-decoration: none;
+    color: var(--color-black);
+    background: transparent;
+    border: 0.0625rem solid var(--color-black);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+  }
+  .feedback__btn:hover,
+  .feedback__btn:focus {
+    background-color: var(--color-white);
+    border-color: transparent;
+  }
+  .feedback__phone {
+    display: none;
+  }
 }
