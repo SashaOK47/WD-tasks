@@ -56,16 +56,13 @@
 .cars__slider-item {
   padding-left: 3.75rem;
   padding-right: 3.75rem;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.cars__slider-item:nth-child(2) {
-  display: none;
-}
-.cars__slider-item:nth-child(3) {
-  display: none;
+.cars__slider-item.cars__slider-item--active {
+  display: flex;
 }
 .cars__slider-arrow {
   display: block;
@@ -133,7 +130,7 @@
   box-shadow: 0 0.25rem 1.5rem var(--color-accent);
 }
 .cars__slider-image {
-  flex: 0 1 50%;
+  flex: 0 1 40%;
 }
 .cars__slider-image img {
   max-width: 100%;
@@ -214,7 +211,7 @@
   .cars__slider-dots {
     margin-bottom: 0.625rem;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     left: 50%;
     bottom: 17%;
     transform: translateX(-50%);

@@ -230,7 +230,7 @@
             >
           </div>
           <div class="cars__slider-list">
-            <div class="cars__slider-item">
+            <div class="cars__slider-item cars__slider-item--active">
               <div class="cars__slider-info car-info">
                 <p class="car-info__title">Газель 3 метра</p>
                 <ul class="car-info__list">
@@ -310,18 +310,6 @@
                 name="slider-dot"
                 id="slider-dot--three"
               />
-              <input
-                class="slider-dots__input slider-dots__input--four"
-                type="radio"
-                name="slider-dot"
-                id="slider-dot--four"
-              />
-              <input
-                class="slider-dots__input slider-dots__input--five"
-                type="radio"
-                name="slider-dot"
-                id="slider-dot--five"
-              />
               <label
                 class="slider-dots__label slider-dots__label--one"
                 for="slider-dot--one"
@@ -333,14 +321,6 @@
               <label
                 class="slider-dots__label slider-dots__label--three"
                 for="slider-dot--three"
-              ></label>
-              <label
-                class="slider-dots__label slider-dots__label--four"
-                for="slider-dot--four"
-              ></label>
-              <label
-                class="slider-dots__label slider-dots__label--five"
-                for="slider-dot--five"
               ></label>
             </div>
           </div>
@@ -361,9 +341,12 @@
                 положительные впечатления. Хотелось отметить замечательного
                 водителя газели Алексея. Были трудности с заездом во двор, он
                 проявил себя как компетентный и профессиональный сотрудник, за
-                что ему огромное...
+                что ему огромное<span class="reviews__comment-dots">...</span
+                ><span class="reviews__comment-more"></span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
+                >
               </p>
-              <span class="reviews__more">Читать полностью</span>
+              <span class="reviews__more-btn" data-btn>Читать полностью</span>
             </div>
             <div class="reviews__item">
               <p class="reviews__name">Светлана Васильевна</p>
@@ -376,9 +359,12 @@
                 несмотря на то, что к нам опоздали на 1,5 часа. Морально были к
                 этому готовы ( в прошлый переезд в другой фирме тоже опоздали на
                 час). Водитель заранее позвонил, предупредил, что задерживается.
-                Когда....
+                Когда<span class="reviews__comment-dots">...</span
+                ><span class="reviews__comment-more"
+                  >Lorem ipsum dolor, sit amet consectetur adipisicing.</span
+                >
               </p>
-              <span class="reviews__more">Читать полностью</span>
+              <span class="reviews__more-btn" data-btn>Читать полностью</span>
             </div>
             <div class="reviews__item">
               <p class="reviews__name">Ольга Петрова</p>
@@ -391,9 +377,12 @@
                 фиксированы, что упрощает расчет. Безо всяких заморочек, в
                 отличии от их конкурентов. Упаковали все качественно и быстро.
                 Все вещи приехали в сохранности. Особая благодарность Александру
-                за его...
+                за его<span class="reviews__comment-dots">...</span
+                ><span class="reviews__comment-more">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
+                >
               </p>
-              <span class="reviews__more">Читать полностью</span>
+              <span class="reviews__more-btn" data-btn>Читать полностью</span>
             </div>
           </div>
           <a class="reviews__button" href="#">Все отзывы</a>
@@ -466,6 +455,14 @@
                           <option value="moss" selected>Мозырь</option>
                         </select>
                       </div>
+
+                      <label class="cities__add-label" for="add-city"></label>
+                      <input
+                        class="cities__add-input"
+                        id="add-city"
+                        type="text"
+                        placeholder="Добавить город"
+                      />
                     </div>
                   </div>
                   <div class="form__payment payment">
