@@ -250,10 +250,14 @@
 }
 .form__footer-left {
   margin-right: 4rem;
+  min-width: 350px;
 }
 .form__footer-timer {
   font-size: 6rem;
   line-height: 7.875rem;
+}
+.form__footer-right {
+  margin-left: 2rem;
 }
 .form__footer-btn {
   display: none;

@@ -84,6 +84,35 @@ document.addEventListener("DOMContentLoaded", () => {
         prev.addEventListener('click', prevSlide);
     }());
 
+    (function() {
+        const timer = document.querySelector(".form__footer-timer");
+    let time = new Date().setHours(new Date().getHours() + 6);
+    // Для проверки
+    // let time = new Date().setMinutes(new Date().getMinutes() + 1);
+    
+
+    const x = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = time - now;
+
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0"+ seconds : seconds;
+
+        timer.innerHTML = `${hours}:${minutes}:${seconds}`;
+        if (distance < 0) {
+          clearInterval(x);
+          timer.innerHTML = 'Время истекло';
+          timer.style.fontSize = '5rem';
+          timer.style.lineHeight = '4rem';
+        }
+    }, 1000);
+    }());
+
 
     burger.addEventListener('click', () => {
         burger.classList.toggle('active');
