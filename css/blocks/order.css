@@ -38,6 +38,7 @@
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.25rem;
+  transition: all 0.5s;
 }
 .form__contacts-name {
   margin-right: 4.5rem;
@@ -48,6 +49,12 @@
   font-size: 1rem;
   line-height: 1.25rem;
   color: var(--color-black-rgba);
+}
+.form__contacts-name.error {
+  border-bottom-color: var(--color-red);
+}
+.form__contacts-phone.error {
+  border-bottom-color: var(--color-red);
 }
 .form__location {
   display: flex;
@@ -67,6 +74,7 @@
 .regions__wrapper,
 .cities__wrapper {
   position: relative;
+  margin-bottom: 1rem;
 }
 .regions__wrapper::after,
 .cities__wrapper::after {
@@ -95,6 +103,18 @@
   line-height: 1.25rem;
   -webkit-appearance: none;
   appearance: none;
+}
+.cities__add-input {
+  text-align: left;
+  padding-bottom: 0.8rem;
+  padding-right: 1rem;
+  width: 18.75rem;
+  border: none;
+  border-bottom: 0.0625rem solid var(--color-black);
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 .form__payment {
   padding-bottom: 4rem;
@@ -249,8 +269,8 @@
   align-items: center;
 }
 .form__footer-left {
-  margin-right: 4rem;
-  min-width: 350px;
+  display: block;
+  min-width: 400px;
 }
 .form__footer-timer {
   font-size: 6rem;

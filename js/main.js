@@ -86,12 +86,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     (function() {
         const timer = document.querySelector(".form__footer-timer");
-    let time = new Date().setHours(new Date().getHours() + 6);
-    // Для проверки
-    // let time = new Date().setMinutes(new Date().getMinutes() + 1);
+        let time = new Date().setHours(new Date().getHours() + 6);
+        // Для проверки
+        // let time = new Date().setMinutes(new Date().getMinutes() + 1);
     
 
-    const x = setInterval(() => {
+        const timerId = setInterval(() => {
         const now = new Date().getTime();
         const distance = time - now;
 
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         timer.innerHTML = `${hours}:${minutes}:${seconds}`;
         if (distance < 0) {
-          clearInterval(x);
+          clearInterval(timerId);
           timer.innerHTML = 'Время истекло';
           timer.style.fontSize = '5rem';
           timer.style.lineHeight = '4rem';
@@ -113,10 +113,106 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1000);
     }());
 
+    (function() {
+        const form = document.querySelector('.form');
+        const inputName = document.querySelector('.form__contacts-name');
+        const inputPhone = document.querySelector('.form__contacts-phone');
 
-    burger.addEventListener('click', () => {
-        burger.classList.toggle('active');
-        menu.classList.toggle('active');
-    });
+        form.addEventListener('submit', e => {
+            if(inputName.value === '') {
+                e.preventDefault();
+                inputName.classList.add('error');
+            } else {
+                inputName.classList.remove('error');
+            }
 
+            if(inputPhone.value === '') {
+                e.preventDefault();
+                inputPhone.classList.add('error');
+            } else {
+                inputPhone.classList.remove('error');
+            }
+        });
+    }());
+
+    (function() {
+        const inputCity = document.querySelector('.cities__add-input');
+        const selectCities = document.querySelector('.cities__select');
+
+        inputCity.addEventListener("keydown", function (event) {
+            if (event.key == "Enter") {
+              event.preventDefault();
+              let newOption = new Option(event.target.value, "");
+              selectCities.append(newOption);
+              inputCity.value = "";
+            }
+          });
+    }());
+
+    (function() {
+        Share = {
+            vkontakte: function(purl, ptitle, pimg, text) {
+                url  = 'http://vkontakte.ru/share.php?';
+                url += 'url='          + encodeURIComponent(purl);
+                url += '&title='       + encodeURIComponent(ptitle);
+                url += '&description=' + encodeURIComponent(text);
+                url += '&image='       + encodeURIComponent(pimg);
+                url += '&noparse=true';
+                Share.popup(url);
+            },
+            facebook: function(purl, ptitle, pimg, text) {
+                url  = 'http://www.facebook.com/sharer.php?s=100';
+                url += '&p[title]='     + encodeURIComponent(ptitle);
+                url += '&p[summary]='   + encodeURIComponent(text);
+                url += '&p[url]='       + encodeURIComponent(purl);
+                url += '&p[images][0]=' + encodeURIComponent(pimg);
+                Share.popup(url);
+            },
+            popup: function(url) {
+                window.open(url,'','toolbar=0,status=0,width=626,height=436');
+            }
+        };
+    }());
+
+    (function() {
+        const burger = document.querySelector('.header__burger');
+        const menu = document.querySelector('.header__menu');
+        const menuLink = document.querySelectorAll('.menu__link');
+    
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+        if(window.innerWidth <= 767) {
+            menuLink.forEach(link => {
+                link.addEventListener('click', () => {
+                    burger.classList.remove('active');
+                    menu.classList.remove('active');
+                })
+            });
+        }
+    }());
+
+    (function() {
+        const rewiewsItem = document.querySelectorAll('.reviews__item');
+        rewiewsItem.forEach(item => {
+            item.addEventListener('click', function (e) {
+                if(e.target.classList.contains('reviews__more-btn')) {
+                    const commentDots = this.querySelector('.reviews__comment-dots');
+                    const commentMore = this.querySelector('.reviews__comment-more');
+                    const moreBtn = e.target;
+
+                    if(commentDots.style.display == 'none') {
+                        commentDots.style.display = 'inline';
+                        moreBtn.innerHTML = 'Читать полностью';
+                        commentMore.style.display = 'none';
+                    } else {
+                        commentDots.style.display = 'none';
+                        moreBtn.innerHTML = 'Скрыть';
+                        commentMore.style.display = 'inline';
+                    }
+                }
+            })
+        });
+    }())
 });
