@@ -194,25 +194,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }());
 
     (function() {
-        const rewiewsItem = document.querySelectorAll('.reviews__item');
-        rewiewsItem.forEach(item => {
-            item.addEventListener('click', function (e) {
-                if(e.target.classList.contains('reviews__more-btn')) {
-                    const commentDots = this.querySelector('.reviews__comment-dots');
-                    const commentMore = this.querySelector('.reviews__comment-more');
-                    const moreBtn = e.target;
-
-                    if(commentDots.style.display == 'none') {
-                        commentDots.style.display = 'inline';
-                        moreBtn.innerHTML = 'Читать полностью';
-                        commentMore.style.display = 'none';
-                    } else {
-                        commentDots.style.display = 'none';
-                        moreBtn.innerHTML = 'Скрыть';
-                        commentMore.style.display = 'inline';
-                    }
-                }
-            })
+        const reviewsList = document.querySelector('.reviews__list');
+        reviewsList.addEventListener('click', e => {
+            const current = e.target;
+            const reviewsBtn = current.classList.contains('reviews__more-btn');
+            if(reviewsBtn) {
+                const commentMore = e.target.parentNode.querySelector('.reviews__comment-more');
+                const dots = e.target.parentNode.querySelector('.reviews__comment-dots');
+                commentMore.classList.toggle('toggle-text');
+                dots.classList.toggle('toggle-dots');
+                current.textContent = current.textContent.includes('Читать полностью') ? "Скрыть" : 'Читать полностью';
+            }
         });
     }())
 });
