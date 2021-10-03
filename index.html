@@ -229,66 +229,68 @@
               >Грузовики</label
             >
           </div>
-          <div class="cars__slider-list">
-            <div class="cars__slider-item cars__slider-item--active">
-              <div class="cars__slider-info car-info">
-                <p class="car-info__title">Газель 3 метра</p>
-                <ul class="car-info__list">
-                  <li class="car-info__item">Ширина 2 м</li>
-                  <li class="car-info__item">Высота 2 м</li>
-                  <li class="car-info__item">Объем 16 м³</li>
-                  <li class="car-info__item">Грузоподъемность 1,5 т</li>
-                </ul>
-                <p class="car-info__text">Газель 3 метра / 1,5 тонны</p>
-                <div class="car-info__button">Заказать</div>
+          <div class="cars__slider slider">
+            <div class="slider__wrapper">
+              <div class="slider__item">
+                <div class="slider__info car-info">
+                  <p class="car-info__title">Газель 3 метра</p>
+                  <ul class="car-info__list">
+                    <li class="car-info__item">Ширина 2 м</li>
+                    <li class="car-info__item">Высота 2 м</li>
+                    <li class="car-info__item">Объем 16 м³</li>
+                    <li class="car-info__item">Грузоподъемность 1,5 т</li>
+                  </ul>
+                  <div class="car-info__button">Заказать</div>
+                </div>
+                <div class="slider__image">
+                  <img src="./img/car-1.png" alt="Slider image" />
+                </div>
+                <p class="slider__text">Газель 3 метра / 1,5 тонны</p>
               </div>
-              <div class="cars__slider-image">
-                <img src="./img/car-shadow.png" alt="" />
+              <div class="slider__item">
+                <div class="slider__info car-info">
+                  <p class="car-info__title">Каблук 2 метра</p>
+                  <ul class="car-info__list">
+                    <li class="car-info__item">Ширина 1.8 м</li>
+                    <li class="car-info__item">Высота 1.2 м</li>
+                    <li class="car-info__item">Объем 8 м³</li>
+                    <li class="car-info__item">Грузоподъемность 0,8 т</li>
+                  </ul>
+                  <div class="car-info__button">Заказать</div>
+                </div>
+                <div class="slider__image">
+                  <img src="./img/car-2.png" alt="Slider image" />
+                </div>
+                <p class="slider__text">Каблук 2 метра / 0,8 тонн</p>
               </div>
-            </div>
-            <div class="cars__slider-item">
-              <div class="cars__slider-info car-info">
-                <p class="car-info__title">Каблук 2 метра</p>
-                <ul class="car-info__list">
-                  <li class="car-info__item">Ширина 1.8 м</li>
-                  <li class="car-info__item">Высота 1.2 м</li>
-                  <li class="car-info__item">Объем 8 м³</li>
-                  <li class="car-info__item">Грузоподъемность 0,8 т</li>
-                </ul>
-                <p class="car-info__text">Каблук 2 метра / 0,8 тонны</p>
-                <div class="car-info__button">Заказать</div>
-              </div>
-              <div class="cars__slider-image">
-                <img src="./img/car-2.png" alt="" />
-              </div>
-            </div>
-            <div class="cars__slider-item">
-              <div class="cars__slider-info car-info">
-                <p class="car-info__title">Грузовик 3 метра</p>
-                <ul class="car-info__list">
-                  <li class="car-info__item">Ширина 3 м</li>
-                  <li class="car-info__item">Высота 3 м</li>
-                  <li class="car-info__item">Объем 20 м³</li>
-                  <li class="car-info__item">Грузоподъемность 2 т</li>
-                </ul>
-                <p class="car-info__text">Грузовик 3 метра / 2 тонны</p>
-                <div class="car-info__button">Заказать</div>
-              </div>
-              <div class="cars__slider-image">
-                <img src="./img/car-3.png" alt="" />
+              <div class="slider__item">
+                <div class="slider__info car-info">
+                  <p class="car-info__title">Грузовик 3 метра</p>
+                  <ul class="car-info__list">
+                    <li class="car-info__item">Ширина 3 м</li>
+                    <li class="car-info__item">Высота 3 м</li>
+                    <li class="car-info__item">Объем 20 м³</li>
+                    <li class="car-info__item">Грузоподъемность 2 т</li>
+                  </ul>
+                  <div class="car-info__button">Заказать</div>
+                </div>
+                <div class="slider__image">
+                  <img src="./img/car-3.png" alt="Slider image" />
+                </div>
+                <p class="slider__text">Каблук 2 метра / 2 тонны</p>
               </div>
             </div>
             <button
-              class="cars__slider-arrow cars__slider-arrow--left"
+              class="cars__slider-arrow cars__slider-arrow--prev"
               type="button"
             >
-              <img src="./img/arrow.svg" alt="Arrow left" />
+              <img src="./img/arrow.svg" alt="" />
             </button>
             <button
-              class="cars__slider-arrow cars__slider-arrow--right"
+              class="cars__slider-arrow cars__slider-arrow--next"
               type="button"
             >
-              <img src="./img/arrow.svg" alt="Arrow right" />
+              <img src="./img/arrow.svg" alt="" />
             </button>
             <div class="cars__slider-dots slider-dots">
               <input
@@ -323,6 +325,7 @@
                 for="slider-dot--three"
               ></label>
             </div>
+            <button class="slider__btn">Заказать</button>
           </div>
         </div>
       </section>

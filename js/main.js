@@ -10,78 +10,75 @@ document.addEventListener("DOMContentLoaded", () => {
     }());
 
     (function() {
-        const prev = document.querySelector('.cars__slider-arrow--left');
-        const next = document.querySelector('.cars__slider-arrow--right');
-        const slides = document.querySelectorAll('.cars__slider-item');
+        const slider = document.querySelector('.slider');
+        const sliderWrapper = document.querySelector('.slider__wrapper');
+        const sliderItems = document.querySelectorAll('.slider__item');
+        const nextBtn = document.querySelector('.cars__slider-arrow--next');
+        const prevBtn = document.querySelector('.cars__slider-arrow--prev');
         const tabs = document.querySelectorAll('.tabs__input');
         const dots = document.querySelectorAll('.slider-dots__input');
+        let position = 0;
+        let width;
         let index = 0;
-    
-        const activeSlide = n => {
-            for(slide of slides) {
-                slide.classList.remove('cars__slider-item--active');
+        width = slider.offsetWidth;
+        sliderWrapper.style.width = width * sliderItems.length + 'px';
+        const nextSlide = () => {
+            if(position < width * (sliderItems.length - 1)) {
+                position += width;
+                index++;
+            } else {
+                position = 0;
+                index = 0;
             }
-            slides[n].classList.add('cars__slider-item--active');
+            sliderWrapper.style.left = -position + 'px';
+            activeTab(index);
+            activeDot(index);
         }
-        const activeTab = n => {
-            for(tab of tabs) {
+        const prevSlide = () => {
+            if(position > 0) {
+                position -= width;
+                index--;
+            } else {
+                position = width * (sliderItems.length - 1);
+                index = (sliderItems.length - 1);
+            }
+            sliderWrapper.style.left = -position + 'px';
+            activeTab(index);
+            activeDot(index);
+        }
+        const activeTab = index => {
+            for(let tab of tabs) {
                 tab.checked = false;
             }
-            tabs[n].checked = true;;
+            tabs[index].checked = true;
         }
-        const activeDot = n => {
-            for(dot of dots) {
+        const activeDot = index => {
+            for(let dot of dots) {
                 dot.checked = false;
             }
-            dots[n].checked = true;;
+            dots[index].checked = true;
         }
-        const nextSlide = () => {
-            if(index == slides.length - 1) {
-                index = 0;
-                activeSlide(index);
-                activeTab(index);
-                activeDot(index);
-            } else {
-                index++;
-                activeSlide(index);
-                activeTab(index);
-                activeDot(index);
-            }
-        }
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
     
-        const prevSlide = () => {
-            if(index == 0) {
-                index = slides.length - 1
-                activeSlide(index);
+        tabs.forEach((tab, tabIndex) => {
+            tab.addEventListener('click', () => {
+                position = width * tabIndex;
+                sliderWrapper.style.left = -position + 'px';
+                index = tabIndex;
                 activeTab(index);
                 activeDot(index);
-            } else {
-                index--;
-                activeSlide(index);
-                activeTab(index);
-                activeDot(index);
-            }
-        }
-    
-        tabs.forEach((item, indexTab) => {
-            item.addEventListener('click', () => {
-                index = indexTab;
-                activeSlide(index);
-                activeTab(index);
-                activeDot(index);
-            });
+            })
         });
-        dots.forEach((item, indexDot) => {
-            item.addEventListener('click', () => {
-                index = indexDot;
-                activeSlide(index);
-                activeTab(index);
+        dots.forEach((dot, dotIndex) => {
+            dot.addEventListener('click', () => {
+                position = width * dotIndex;
+                sliderWrapper.style.left = -position + 'px';
+                index = dotIndex;
                 activeDot(index);
-            });
+                activeTab(index);
+            })
         });
-    
-        next.addEventListener('click', nextSlide);
-        prev.addEventListener('click', prevSlide);
     }());
 
     (function() {
