@@ -38,6 +38,7 @@
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.25rem;
+  transition: all 0.5s;
 }
 .form__contacts-name {
   margin-right: 4.5rem;
@@ -48,6 +49,12 @@
   font-size: 1rem;
   line-height: 1.25rem;
   color: var(--color-black-rgba);
+}
+.form__contacts-name.error {
+  border-bottom-color: var(--color-red);
+}
+.form__contacts-phone.error {
+  border-bottom-color: var(--color-red);
 }
 .form__location {
   display: flex;
@@ -67,6 +74,7 @@
 .regions__wrapper,
 .cities__wrapper {
   position: relative;
+  margin-bottom: 1rem;
 }
 .regions__wrapper::after,
 .cities__wrapper::after {
@@ -95,6 +103,18 @@
   line-height: 1.25rem;
   -webkit-appearance: none;
   appearance: none;
+}
+.cities__add-input {
+  text-align: left;
+  padding-bottom: 0.8rem;
+  padding-right: 1rem;
+  width: 18.75rem;
+  border: none;
+  border-bottom: 0.0625rem solid var(--color-black);
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 .form__payment {
   padding-bottom: 4rem;
@@ -167,25 +187,32 @@
   line-height: 1.5rem;
 }
 .additional-services__button {
-  position: relative;
-  display: inline-block;
-  background: none;
-}
-.additional-services__button span {
   width: 0.7rem;
   height: 0.7rem;
-  border: 0.125rem solid var(--color-black);
-  border-right: none;
-  border-bottom: none;
+  position: relative;
+  top: 3px;
+  background: none;
+  border-left: 0.125rem solid var(--color-black);
+  border-top: 0.125rem solid var(--color-black);
   transform: rotate(45deg);
-  position: absolute;
-  top: -0.5rem;
-  left: 0;
+  transition: transform 0.5s ease;
+}
+.additional-services__button.js-rotate {
+  transform: rotate(225deg);
+  top: -2px;
+}
+.additional-services__overlay {
+  overflow: hidden;
 }
 .additional-services__list {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+}
+.additional-services__list.additional-services__list--active {
+  transform: translateY(0);
 }
 .additional-services__item {
   margin-right: 2.5rem;
@@ -242,11 +269,15 @@
   align-items: center;
 }
 .form__footer-left {
-  margin-right: 4rem;
+  display: block;
+  min-width: 400px;
 }
 .form__footer-timer {
   font-size: 6rem;
   line-height: 7.875rem;
+}
+.form__footer-right {
+  margin-left: 2rem;
 }
 .form__footer-btn {
   display: none;
@@ -375,6 +406,9 @@
   }
   .form__footer-button {
     display: none;
+  }
+  .form__footer-right {
+    margin-left: 0;
   }
   .form__footer-btn {
     width: 100%;

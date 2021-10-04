@@ -94,6 +94,7 @@
 @media (max-width: 480px) {
   .price {
     padding-top: 3.125rem;
+    margin-bottom: 5rem;
   }
   .price__title {
     margin-bottom: 1rem;

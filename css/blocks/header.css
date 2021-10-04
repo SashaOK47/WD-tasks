@@ -56,6 +56,9 @@
   }
 }
 @media (max-width: 768px) {
+  body.no-scroll {
+    overflow: hidden;
+  }
   .header__menu {
     position: fixed;
     top: 0;

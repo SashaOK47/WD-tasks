@@ -229,66 +229,68 @@
               >Грузовики</label
             >
           </div>
-          <div class="cars__slider-list">
-            <div class="cars__slider-item">
-              <div class="cars__slider-info car-info">
-                <p class="car-info__title">Газель 3 метра</p>
-                <ul class="car-info__list">
-                  <li class="car-info__item">Ширина 2 м</li>
-                  <li class="car-info__item">Высота 2 м</li>
-                  <li class="car-info__item">Объем 16 м³</li>
-                  <li class="car-info__item">Грузоподъемность 1,5 т</li>
-                </ul>
-                <p class="car-info__text">Газель 3 метра / 1,5 тонны</p>
-                <div class="car-info__button">Заказать</div>
+          <div class="cars__slider slider">
+            <div class="slider__wrapper">
+              <div class="slider__item">
+                <div class="slider__info car-info">
+                  <p class="car-info__title">Газель 3 метра</p>
+                  <ul class="car-info__list">
+                    <li class="car-info__item">Ширина 2 м</li>
+                    <li class="car-info__item">Высота 2 м</li>
+                    <li class="car-info__item">Объем 16 м³</li>
+                    <li class="car-info__item">Грузоподъемность 1,5 т</li>
+                  </ul>
+                  <div class="car-info__button">Заказать</div>
+                </div>
+                <div class="slider__image">
+                  <img src="./img/car-1.png" alt="Slider image" />
+                </div>
+                <p class="slider__text">Газель 3 метра / 1,5 тонны</p>
               </div>
-              <div class="cars__slider-image">
-                <img src="./img/car-shadow.png" alt="" />
+              <div class="slider__item">
+                <div class="slider__info car-info">
+                  <p class="car-info__title">Каблук 2 метра</p>
+                  <ul class="car-info__list">
+                    <li class="car-info__item">Ширина 1.8 м</li>
+                    <li class="car-info__item">Высота 1.2 м</li>
+                    <li class="car-info__item">Объем 8 м³</li>
+                    <li class="car-info__item">Грузоподъемность 0,8 т</li>
+                  </ul>
+                  <div class="car-info__button">Заказать</div>
+                </div>
+                <div class="slider__image">
+                  <img src="./img/car-2.png" alt="Slider image" />
+                </div>
+                <p class="slider__text">Каблук 2 метра / 0,8 тонн</p>
               </div>
-            </div>
-            <div class="cars__slider-item">
-              <div class="cars__slider-info car-info">
-                <p class="car-info__title">Каблук 2 метра</p>
-                <ul class="car-info__list">
-                  <li class="car-info__item">Ширина 1.8 м</li>
-                  <li class="car-info__item">Высота 1.2 м</li>
-                  <li class="car-info__item">Объем 8 м³</li>
-                  <li class="car-info__item">Грузоподъемность 0,8 т</li>
-                </ul>
-                <p class="car-info__text">Каблук 2 метра / 0,8 тонны</p>
-                <div class="car-info__button">Заказать</div>
-              </div>
-              <div class="cars__slider-image">
-                <img src="./img/car-2.png" alt="" />
-              </div>
-            </div>
-            <div class="cars__slider-item">
-              <div class="cars__slider-info car-info">
-                <p class="car-info__title">Грузовик 3 метра</p>
-                <ul class="car-info__list">
-                  <li class="car-info__item">Ширина 3 м</li>
-                  <li class="car-info__item">Высота 3 м</li>
-                  <li class="car-info__item">Объем 20 м³</li>
-                  <li class="car-info__item">Грузоподъемность 2 т</li>
-                </ul>
-                <p class="car-info__text">Грузовик 3 метра / 2 тонны</p>
-                <div class="car-info__button">Заказать</div>
-              </div>
-              <div class="cars__slider-image">
-                <img src="./img/car-3.png" alt="" />
+              <div class="slider__item">
+                <div class="slider__info car-info">
+                  <p class="car-info__title">Грузовик 3 метра</p>
+                  <ul class="car-info__list">
+                    <li class="car-info__item">Ширина 3 м</li>
+                    <li class="car-info__item">Высота 3 м</li>
+                    <li class="car-info__item">Объем 20 м³</li>
+                    <li class="car-info__item">Грузоподъемность 2 т</li>
+                  </ul>
+                  <div class="car-info__button">Заказать</div>
+                </div>
+                <div class="slider__image">
+                  <img src="./img/car-3.png" alt="Slider image" />
+                </div>
+                <p class="slider__text">Каблук 2 метра / 2 тонны</p>
               </div>
             </div>
             <button
-              class="cars__slider-arrow cars__slider-arrow--left"
+              class="cars__slider-arrow cars__slider-arrow--prev"
               type="button"
             >
-              <img src="./img/arrow.svg" alt="Arrow left" />
+              <img src="./img/arrow.svg" alt="" />
             </button>
             <button
-              class="cars__slider-arrow cars__slider-arrow--right"
+              class="cars__slider-arrow cars__slider-arrow--next"
               type="button"
             >
-              <img src="./img/arrow.svg" alt="Arrow right" />
+              <img src="./img/arrow.svg" alt="" />
             </button>
             <div class="cars__slider-dots slider-dots">
               <input
@@ -310,18 +312,6 @@
                 name="slider-dot"
                 id="slider-dot--three"
               />
-              <input
-                class="slider-dots__input slider-dots__input--four"
-                type="radio"
-                name="slider-dot"
-                id="slider-dot--four"
-              />
-              <input
-                class="slider-dots__input slider-dots__input--five"
-                type="radio"
-                name="slider-dot"
-                id="slider-dot--five"
-              />
               <label
                 class="slider-dots__label slider-dots__label--one"
                 for="slider-dot--one"
@@ -334,15 +324,8 @@
                 class="slider-dots__label slider-dots__label--three"
                 for="slider-dot--three"
               ></label>
-              <label
-                class="slider-dots__label slider-dots__label--four"
-                for="slider-dot--four"
-              ></label>
-              <label
-                class="slider-dots__label slider-dots__label--five"
-                for="slider-dot--five"
-              ></label>
             </div>
+            <button class="slider__btn">Заказать</button>
           </div>
         </div>
       </section>
@@ -361,9 +344,12 @@
                 положительные впечатления. Хотелось отметить замечательного
                 водителя газели Алексея. Были трудности с заездом во двор, он
                 проявил себя как компетентный и профессиональный сотрудник, за
-                что ему огромное...
+                что ему огромное<span class="reviews__comment-dots">...</span
+                ><span class="reviews__comment-more">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
+                >
               </p>
-              <span class="reviews__more">Читать полностью</span>
+              <span class="reviews__more-btn" data-btn>Читать полностью</span>
             </div>
             <div class="reviews__item">
               <p class="reviews__name">Светлана Васильевна</p>
@@ -376,9 +362,12 @@
                 несмотря на то, что к нам опоздали на 1,5 часа. Морально были к
                 этому готовы ( в прошлый переезд в другой фирме тоже опоздали на
                 час). Водитель заранее позвонил, предупредил, что задерживается.
-                Когда....
+                Когда<span class="reviews__comment-dots">...</span
+                ><span class="reviews__comment-more">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing.</span
+                >
               </p>
-              <span class="reviews__more">Читать полностью</span>
+              <span class="reviews__more-btn" data-btn>Читать полностью</span>
             </div>
             <div class="reviews__item">
               <p class="reviews__name">Ольга Петрова</p>
@@ -391,9 +380,12 @@
                 фиксированы, что упрощает расчет. Безо всяких заморочек, в
                 отличии от их конкурентов. Упаковали все качественно и быстро.
                 Все вещи приехали в сохранности. Особая благодарность Александру
-                за его...
+                за его<span class="reviews__comment-dots">...</span
+                ><span class="reviews__comment-more">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
+                >
               </p>
-              <span class="reviews__more">Читать полностью</span>
+              <span class="reviews__more-btn" data-btn>Читать полностью</span>
             </div>
           </div>
           <a class="reviews__button" href="#">Все отзывы</a>
@@ -466,6 +458,14 @@
                           <option value="moss" selected>Мозырь</option>
                         </select>
                       </div>
+
+                      <label class="cities__add-label" for="add-city"></label>
+                      <input
+                        class="cities__add-input"
+                        id="add-city"
+                        type="text"
+                        placeholder="Добавить город"
+                      />
                     </div>
                   </div>
                   <div class="form__payment payment">
@@ -515,73 +515,80 @@
                       class="additional-services__button"
                       type="button"
                       aria-label="Показать дополнительные услуги"
-                    >
-                      <span></span>
-                    </button>
-                    <div class="additional-services__list">
-                      <p class="additional-services__item">
-                        <input
-                          class="additional-services__checkbox"
-                          id="measurer"
-                          name="measurer"
-                          type="checkbox"
-                        />
-                        <label class="additional-services__label" for="measurer"
-                          >Вызов замерщика</label
-                        >
-                      </p>
-                      <p class="additional-services__item">
-                        <input
-                          class="additional-services__checkbox"
-                          id="packaging"
-                          name="packaging"
-                          type="checkbox"
-                        />
-                        <label
-                          class="additional-services__label"
-                          for="packaging"
-                          >Упаковка для хрупких предметов</label
-                        >
-                      </p>
-                      <p class="additional-services__item">
-                        <input
-                          class="additional-services__checkbox"
-                          id="crane"
-                          name="crane"
-                          type="checkbox"
-                        />
-                        <label class="additional-services__label" for="crane"
-                          >Кран</label
-                        >
-                      </p>
-                      <p class="additional-services__item">
-                        <input
-                          class="additional-services__checkbox"
-                          id="furniture"
-                          name="furniture"
-                          type="checkbox"
-                          checked
-                        />
-                        <label
-                          class="additional-services__label"
-                          for="furniture"
-                          >Сборка мебели</label
-                        >
-                      </p>
-                      <p class="additional-services__item">
-                        <input
-                          class="additional-services__checkbox"
-                          id="bulky-items"
-                          name="bulky-items"
-                          type="checkbox"
-                          checked
-                        />
-                        <label
-                          class="additional-services__label"
-                          for="bulky-items"
-                          >Крупногабаритные предметы</label
-                        >
-                      </p>
+                    ></button>
+                    <div class="additional-services__overlay">
+                      <div
+                        class="
+                          additional-services__list
+                          additional-services__list--active
+                        "
+                      >
+                        <p class="additional-services__item">
+                          <input
+                            class="additional-services__checkbox"
+                            id="measurer"
+                            name="measurer"
+                            type="checkbox"
+                          />
+                          <label
+                            class="additional-services__label"
+                            for="measurer"
+                            >Вызов замерщика</label
+                          >
+                        </p>
+                        <p class="additional-services__item">
+                          <input
+                            class="additional-services__checkbox"
+                            id="packaging"
+                            name="packaging"
+                            type="checkbox"
+                          />
+                          <label
+                            class="additional-services__label"
+                            for="packaging"
+                            >Упаковка для хрупких предметов</label
+                          >
+                        </p>
+                        <p class="additional-services__item">
+                          <input
+                            class="additional-services__checkbox"
+                            id="crane"
+                            name="crane"
+                            type="checkbox"
+                          />
+                          <label class="additional-services__label" for="crane"
+                            >Кран</label
+                          >
+                        </p>
+                        <p class="additional-services__item">
+                          <input
+                            class="additional-services__checkbox"
+                            id="furniture"
+                            name="furniture"
+                            type="checkbox"
+                            checked
+                          />
+                          <label
+                            class="additional-services__label"
+                            for="furniture"
+                            >Сборка мебели</label
+                          >
+                        </p>
+                        <p class="additional-services__item">
+                          <input
+                            class="additional-services__checkbox"
+                            id="bulky-items"
+                            name="bulky-items"
+                            type="checkbox"
+                            checked
+                          />
+                          <label
+                            class="additional-services__label"
+                            for="bulky-items"
+                            >Крупногабаритные предметы</label
+                          >
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -743,7 +750,8 @@
               <p class="social__share-title">Поделиться в соц. сетях</p>
               <a
                 class="social__share-link"
-                href="https://vk.com/"
+                href="#"
+                onclick="Share.vkontakte('URL','TITLE','IMG_PATH','DESC')"
                 aria-label="Поделиться в vk"
               >
                 <svg
@@ -760,8 +768,9 @@
               </a>
               <a
                 class="social__share-link"
-                href="https://www.facebook.com/"
+                href="#"
                 aria-label="Поделиться в facebook"
+                onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')"
               >
                 <svg
                   class="social__share-svg"
