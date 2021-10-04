@@ -179,12 +179,14 @@ document.addEventListener("DOMContentLoaded", () => {
         burger.addEventListener('click', () => {
             burger.classList.toggle('active');
             menu.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
         });
         if(window.innerWidth <= 767) {
             menuLink.forEach(link => {
                 link.addEventListener('click', () => {
                     burger.classList.remove('active');
                     menu.classList.remove('active');
+                    document.body.classList.toggle('no-scroll');
                 })
             });
         }
